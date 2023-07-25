@@ -5,14 +5,13 @@ import { useState } from "react";
 function App() {
 
   let REACT_APP_KEY = "pk.0988406d58ca554ca26fe1365768841f";
-  
   const [SearchQuery, setSearchQuery] = useState("");
   const [location, setLocation] = useState({});
 
   async function getLocation(event){
     //event.target.input.value = "";
     event.preventDefault();
-    const API = `https://eu1.locationiq.com/v1/search?key=${REACT_APP_KEY}N&q=${SearchQuery}&format=json`;
+    const API = `https://eu1.locationiq.com/v1/search?key=${REACT_APP_KEY}&q=${SearchQuery}&format=json`;
     let result = await axios.get(API);
     setLocation(result[0]);
     console.log(API);
