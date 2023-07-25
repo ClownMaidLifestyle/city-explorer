@@ -6,7 +6,6 @@ function App() {
   
   const [SearchQuery, setSearchQuery] = useState("");
   const [location, setLocation] = useState({});
-  const [map, setMap] = useState("");
 
   async function getLocation(event){
     //event.target.input.value = "";
